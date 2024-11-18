@@ -1,2 +1,0 @@
-# idp
-Internal Developer Platform
