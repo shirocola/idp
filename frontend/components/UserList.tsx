@@ -21,15 +21,24 @@ const UserList: React.FC = () => {
       .catch((err) => setError(err.message));
   }, []);
 
-  if (error) return <div>Error: {error}</div>;
+  if (error)
+    return (
+      <div className="p-4 bg-red-100 text-red-700 font-bold rounded text-center">
+        Error: {error}
+      </div>
+    );
 
   return (
-    <div>
-      <h2>User List</h2>
-      <ul>
+    <div className="p-6 bg-gray-50 rounded shadow-md">
+      <h2 className="text-2xl font-bold text-gray-700 mb-4">User List</h2>
+      <ul className="space-y-4">
         {users.map((user) => (
-          <li key={user.id}>
-            {user.username} ({user.email})
+          <li
+            key={user.id}
+            className="flex justify-between items-center p-4 bg-white rounded shadow-sm hover:shadow-md"
+          >
+            <span className="font-semibold text-gray-800">{user.username}</span>
+            <span className="italic text-gray-600">({user.email})</span>
           </li>
         ))}
       </ul>
