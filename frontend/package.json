@@ -12,6 +12,9 @@
     "generate-docs": "typedoc"
   },
   "dependencies": {
+    "@mdx-js/loader": "^3.1.0",
+    "@mdx-js/react": "^3.1.0",
+    "@next/mdx": "^15.0.3",
     "next": "^15.0.3",
     "next-mdx-remote": "^5.0.0",
     "react": "^18.3.1",
@@ -41,5 +44,9 @@
     "tailwindcss": "^3.4.15",
     "typedoc": "^0.26.11",
     "typescript": "^5"
+  },
+  "overrides": {
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1"
   }
 }
